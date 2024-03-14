@@ -2,7 +2,7 @@ import datagenerator
 from src.VideoGame import VideoGame
 
 if __name__ == "__main__":
-    size = 5
+    size = 10
 
     classifications = datagenerator.generate_random_classification(1, 10, size)
     emails = datagenerator.generate_random_valid_emails(size, '../files/dictionary.txt')

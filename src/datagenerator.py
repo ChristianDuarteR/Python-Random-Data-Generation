@@ -114,5 +114,7 @@ def generate_random_console(size):
         "Atari 2600",
         "Nintendo Entertainment System (NES)"
     ]
+    if size > len(consoles):
+        consoles *= (size // len(consoles)) + 1
 
     return random.sample(consoles, size)

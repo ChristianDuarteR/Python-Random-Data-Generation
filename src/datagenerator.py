@@ -118,3 +118,417 @@ def generate_random_console(size):
         consoles *= (size // len(consoles)) + 1
 
     return random.sample(consoles, size)
+
+
+def generate_random_publishers(size):
+    """
+    Generate a list of random video game publishers.
+
+    Parameters:
+    - size (int): The number of random publishers to generate.
+
+    Returns:
+    - list: A list of random video game publishers.
+    """
+    publishers = [
+        "Electronic Arts",
+        "Activision",
+        "Ubisoft",
+        "Square Enix",
+        "Take-Two Interactive",
+        "Nintendo",
+        "Capcom",
+        "Bandai Namco Entertainment",
+        "Sony Interactive Entertainment",
+        "Microsoft Studios",
+        "Sega",
+        "Bethesda Softworks",
+        "CD Projekt",
+        "Valve",
+        "Epic Games",
+        "Konami",
+        "Rockstar Games",
+        "Tencent Games",
+        "Warner Bros. Interactive Entertainment",
+        "THQ Nordic"
+    ]
+    if size > len(publishers):
+        publishers *= (size // len(publishers)) + 1
+
+    return random.sample(publishers, size)
+
+
+def generate_random_developers(size):
+    """
+    Generate a list of random video game developers.
+
+    Parameters:
+    - size (int): The number of random developers to generate.
+
+    Returns:
+    - list: A list of random video game developers.
+    """
+    developers = [
+        "Naughty Dog",
+        "Infinity Ward",
+        "CD Projekt Red",
+        "Rockstar North",
+        "Nintendo EAD",
+        "Epic Games",
+        "Bethesda Game Studios",
+        "Ubisoft Montreal",
+        "Capcom",
+        "Blizzard Entertainment",
+        "Square Enix",
+        "Valve",
+        "343 Industries",
+        "Bioware",
+        "Insomniac Games",
+        "Respawn Entertainment",
+        "Guerrilla Games",
+        "Bungie",
+        "Kojima Productions",
+        "Gearbox Software"
+    ]
+    if size > len(developers):
+        developers *= (size // len(developers)) + 1
+
+    return random.sample(developers, size)
+
+
+def generate_random_genres(size):
+    """
+    Generate a list of random video game genres.
+
+    Parameters:
+    - size (int): The number of random genres to generate.
+
+    Returns:
+    - list: A list of random video game genres.
+    """
+    genres = [
+        "Action",
+        "Adventure",
+        "Role-Playing",
+        "Simulation",
+        "Strategy",
+        "Sports",
+        "Racing",
+        "Puzzle",
+        "Fighting",
+        "Horror",
+        "Platformer",
+        "Shooter",
+        "Open World",
+        "Survival",
+        "Stealth",
+        "MMORPG",
+        "RTS",
+        "MOBA",
+        "Music/Rhythm",
+        "Educational"
+    ]
+    if size > len(genres):
+        genres *= (size // len(genres)) + 1
+
+    return random.sample(genres, size)
+
+
+def generate_random_multiplayer(size):
+    """
+    Generate a list of random multiplayer options for video games.
+
+    Parameters:
+    - size (int): The number of random multiplayer options to generate.
+
+    Returns:
+    - list: A list of random multiplayer options.
+    """
+    multiplayer_options = [
+        "Local Co-op",
+        "Online Co-op",
+        "Local Multiplayer",
+        "Online Multiplayer",
+        "Split Screen",
+        "LAN Co-op",
+        "LAN Multiplayer",
+        "Couch Co-op",
+        "Couch Multiplayer",
+        "Cross-platform Multiplayer",
+        "Competitive Online",
+        "Competitive Local",
+        "Competitive LAN"
+    ]
+    if size > len(multiplayer_options):
+        multiplayer_options *= (size // len(multiplayer_options)) + 1
+
+    return random.sample(multiplayer_options, size)
+
+
+def generate_random_online_features(size):
+    """
+    Generate a list of random online features for video games.
+
+    Parameters:
+    - size (int): The number of random online features to generate.
+
+    Returns:
+    - list: A list of random online features.
+    """
+    online_features = [
+        "Online Leaderboards",
+        "Cross-platform Play",
+        "Downloadable Content (DLC)",
+        "In-game Purchases",
+        "Cloud Saves",
+        "Online Chat",
+        "Voice Chat",
+        "Matchmaking",
+        "User-generated Content",
+        "Social Media Integration",
+        "Streaming Integration",
+        "Online Tournaments",
+        "Online Events",
+        "Season Pass",
+        "Live Events",
+        "Online Challenges",
+        "Server Browser"
+    ]
+    if size > len(online_features):
+        online_features *= (size // len(online_features)) + 1
+
+    return random.sample(online_features, size)
+
+
+def generate_random_platforms(size):
+    """
+    Generate a list of random platforms for video games.
+
+    Parameters:
+    - size (int): The number of random platforms to generate.
+
+    Returns:
+    - list: A list of random platforms for video games.
+    """
+    platforms = [
+        "PC",
+        "PlayStation 5",
+        "Xbox Series X",
+        "Nintendo Switch",
+        "PlayStation 4",
+        "Xbox One",
+        "Nintendo 3DS",
+        "iOS",
+        "Android",
+        "PlayStation Vita",
+        "Wii U",
+        "Nintendo DS",
+        "PlayStation 3",
+        "Xbox 360",
+        "Wii",
+        "PlayStation 2",
+        "Xbox",
+        "GameCube",
+        "Game Boy Advance",
+        "Nintendo 64"
+    ]
+    if size > len(platforms):
+        platforms *= (size // len(platforms)) + 1
+
+    return random.sample(platforms, size)
+
+
+def generate_random_modes(size):
+    """
+    Generate a list of random modes for video games.
+
+    Parameters:
+    - size (int): The number of random modes to generate.
+
+    Returns:
+    - list: A list of random modes for video games.
+    """
+    modes = [
+        "Single Player",
+        "Multiplayer",
+        "Cooperative",
+        "Competitive",
+        "Online",
+        "Offline",
+        "Story Mode",
+        "Campaign",
+        "Survival",
+        "Free Play",
+        "Challenge Mode",
+        "Time Trial",
+        "Tutorial",
+        "Practice Mode",
+        "Custom Mode"
+    ]
+    if size > len(modes):
+        modes *= (size // len(modes)) + 1
+
+    return random.sample(modes, size)
+def generate_random_dlc_availability(size):
+    """
+    Generate a list of random downloadable content (DLC) availability for video games.
+
+    Parameters:
+    - size (int): The number of random DLC availability options to generate.
+
+    Returns
+     - list: A list of random downloadable content (DLC) availability for video games.
+    """
+
+    dlc_availability = [
+        "Available",
+        "Not Available",
+        "Planned",
+        "Season Pass",
+        "Expansion Pack",
+        "Free DLC",
+        "Paid DLC"
+    ]
+    return [random.choice(dlc_availability) for _ in range(size)]
+
+
+def generate_random_prices(size):
+    """
+    Generate a list of random prices for video games.
+
+    Parameters:
+    - size (int): The number of random prices to generate.
+
+    Returns:
+    - list: A list of random prices for video games.
+    """
+    return [round(random.uniform(0.99, 59.99), 2) for _ in range(size)]
+
+
+def generate_random_metacritic_scores(size):
+    """
+    Generate a list of random Metacritic scores for video games.
+
+    Parameters:
+    - size (int): The number of random Metacritic scores to generate.
+
+    Returns:
+    - list: A list of random Metacritic scores for video games.
+    """
+    return [random.randint(0, 100) for _ in range(size)]
+
+
+def generate_random_esrb_content_ratings(size):
+    """
+    Generate a list of random ESRB content ratings for video games.
+
+    Parameters:
+    - size (int): The number of random ESRB content ratings to generate.
+
+    Returns:
+    - list: A list of random ESRB content ratings for video games.
+    """
+    esrb_content_ratings = [
+        "Early Childhood",
+        "Everyone",
+        "Everyone 10+",
+        "Teen",
+        "Mature",
+        "Adults Only"
+    ]
+    return [random.choice(esrb_content_ratings) for _ in range(size)]
+
+
+def generate_random_system_requirements(size):
+    """
+    Generate a list of random system requirements for video games.
+
+    Parameters:
+    - size (int): The number of random system requirements to generate.
+
+    Returns:
+    - list: A list of random system requirements for video games.
+    """
+    system_requirements = [
+        "Minimum: Windows 10, Intel Core i5, 8 GB RAM, NVIDIA GeForce GTX 1060, 50 GB storage",
+        "Recommended: Windows 11, Intel Core i7, 16 GB RAM, NVIDIA GeForce RTX 3060, 100 GB storage",
+        "Minimum: macOS Catalina, Intel Core i3, 8 GB RAM, AMD Radeon RX 570, 50 GB storage",
+        "Recommended: macOS Monterey, Apple M1 chip, 16 GB RAM, AMD Radeon Pro 5600M, 100 GB storage",
+        "Minimum: Ubuntu 20.04 LTS, AMD Ryzen 5, 8 GB RAM, AMD Radeon RX 580, 50 GB storage",
+        "Recommended: Ubuntu 22.04 LTS, AMD Ryzen 7, 16 GB RAM, NVIDIA GeForce RTX 3070, 100 GB storage"
+    ]
+    if size > len(system_requirements):
+        system_requirements *= (size // len(system_requirements)) + 1
+
+    return random.sample(system_requirements, size)
+
+
+def generate_random_physical_releases(size):
+    """
+    Generate a list of random physical release information for video games.
+
+    Parameters:
+    - size (int): The number of random physical releases to generate.
+
+    Returns:
+    - list: A list of random physical release information for video games.
+    """
+    physical_releases = [
+        "Standard Edition",
+        "Collector's Edition",
+        "Limited Edition",
+        "Steelbook Edition",
+        "Special Edition",
+        "Game of the Year Edition",
+        "Ultimate Edition",
+        "Day One Edition",
+        "Definitive Edition",
+        "Anniversary Edition",
+        "Complete Edition",
+        "Enhanced Edition",
+        "Platinum Hits",
+        "Gold Edition",
+        "Premium Edition",
+        "Signature Edition"
+    ]
+    if size > len(physical_releases):
+        physical_releases *= (size // len(physical_releases)) + 1
+
+    return random.sample(physical_releases, size)
+
+
+def generate_random_awards(size):
+    """
+    Generate a list of random awards for video games.
+
+    Parameters:
+    - size (int): The number of random awards to generate.
+
+    Returns:
+    - list: A list of random awards for video games.
+    """
+    awards = [
+        "Game of the Year",
+        "Best Action Game",
+        "Best Adventure Game",
+        "Best RPG",
+        "Best Strategy Game",
+        "Best Sports Game",
+        "Best Racing Game",
+        "Best Fighting Game",
+        "Best Multiplayer Game",
+        "Best Indie Game",
+        "Best Narrative",
+        "Best Visuals",
+        "Best Soundtrack",
+        "Best Performance",
+        "Best Direction",
+        "Best Game Design",
+        "Best Innovation",
+        "Fan Favorite",
+        "Most Anticipated"
+    ]
+    if size > len(awards):
+        awards *= (size // len(awards)) + 1
+
+    return random.sample(awards, size)

@@ -1,6 +1,6 @@
 class VideoGame:
     def __init__(self, title, classification, email_provider,
-                 suitable_for, release_date, console, publisher,
+                 release_date, console, publisher,
                  developer, genre, multiplayer, online_features,
                  platform, modes, dlc_available,
                  price, metacritic_score, esrb_content_rating,
@@ -34,7 +34,6 @@ class VideoGame:
         self.title = title
         self.classification = classification
         self.email_provider = email_provider
-        self.suitable_for = suitable_for
         self.release_date = release_date
         self.console = console
         self.publisher = publisher

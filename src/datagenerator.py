@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta
-
 from src.loadWords import load_words_from_file
+import numpy as np
 
 
 def generate_random_classification(start, end, count):
@@ -51,20 +51,6 @@ def generate_random_nameGames(count, themes_file, endings_file):
         game_names.add(game_name)
     return list(game_names)
 
-def generate_random_to(size):
-    """
-    Generate a random age rating for a video game.
-
-    Parameters:
-    - size (int): The number of age ratings to generate.
-
-    Returns:
-    - list: A list of random age ratings for video games.
-    """
-    age_ratings = ["Para todo público", "10+", "13+", "16+", "18+"]
-    return [random.choice(age_ratings) for _ in range(size)]
-
-
 def generate_random_date(size):
     """
     Generate a list of random release dates for video games.
@@ -87,37 +73,25 @@ def generate_random_date(size):
 
 def generate_random_console(size):
     """
-    Generate a list of random video game console names.
+    Generate a list of randomly weighted video game console names.
 
     Parameters:
-    - size (int): The number of random console names to generate.
+    - size (int): The number of console names to generate.
 
     Returns:
-    - list: A list of random console names.
+    - list: A list of randomly weighted console names.
     """
-    consoles = [
-        "PlayStation",
-        "Xbox",
-        "Nintendo Switch",
-        "Sega Dreamcast",
-        "Atari Jaguar",
-        "Super Nintendo Entertainment System (SNES)",
-        "Sony PlayStation 5 (PS5)",
-        "Nintendo 64",
-        "Sega Genesis",
-        "Xbox Series X",
-        "GameCube",
-        "PlayStation 2 (PS2)",
-        "Xbox 360",
-        "Nintendo Wii",
-        "Sega Saturn",
-        "Atari 2600",
-        "Nintendo Entertainment System (NES)"
+    consoles_weighted = [
+        ("A", ["PlayStation", "Nintendo Switch", "Nintendo 64", "Sega Genesis", "GameCube"]),
+        ("B", ["Xbox", "PlayStation 2 (PS2)", "Sega Dreamcast", "Xbox 360"]),
+        ("C", ["Sony PlayStation 5 (PS5)", "Xbox Series X", "Super Nintendo Entertainment System (SNES)"]),
+        ("D", ["Nintendo Wii", "Sega Saturn", "Atari 2600", "Nintendo Entertainment System (NES)"]),
+        ("E", ["Atari Jaguar"])
     ]
-    if size > len(consoles):
-        consoles *= (size // len(consoles)) + 1
 
-    return random.sample(consoles, size)
+    consoles = [console for group in consoles_weighted for console in random.choices(group[1], k=size)]
+
+    return consoles
 
 
 def generate_random_publishers(size):
@@ -198,40 +172,33 @@ def generate_random_developers(size):
 
 def generate_random_genres(size):
     """
-    Generate a list of random video game genres.
+    Generate a list of randomly weighted video game genres.
 
     Parameters:
-    - size (int): The number of random genres to generate.
+    - size (int): The number of genres to generate.
 
     Returns:
-    - list: A list of random video game genres.
+    - list: A list of randomly weighted video game genres.
     """
-    genres = [
-        "Action",
-        "Adventure",
-        "Role-Playing",
-        "Simulation",
-        "Strategy",
-        "Sports",
-        "Racing",
-        "Puzzle",
-        "Fighting",
-        "Horror",
-        "Platformer",
-        "Shooter",
-        "Open World",
-        "Survival",
-        "Stealth",
-        "MMORPG",
-        "RTS",
-        "MOBA",
-        "Music/Rhythm",
-        "Educational"
+    genres_weighted = [
+        ("Action-Adventure", ["Action", "Adventure"]),
+        ("Role-Playing", ["Role-Playing", "MMORPG"]),
+        ("Strategy-Simulation", ["Strategy", "Simulation", "RTS"]),
+        ("Sports-Racing", ["Sports", "Racing"]),
+        ("Puzzle-Platformer", ["Puzzle", "Platformer"]),
+        ("Shooter", ["Shooter"]),
+        ("Open World", ["Open World"]),
+        ("Survival-Horror", ["Survival", "Horror"]),
+        ("Fighting", ["Fighting"]),
+        ("MOBA", ["MOBA"]),
+        ("Music/Rhythm", ["Music/Rhythm"]),
+        ("Educational", ["Educational"]),
+        ("Stealth", ["Stealth"])
     ]
-    if size > len(genres):
-        genres *= (size // len(genres)) + 1
 
-    return random.sample(genres, size)
+    genres = [genre for group in genres_weighted for genre in random.choices(group[1], k=size)]
+
+    return genres
 
 
 def generate_random_multiplayer(size):
@@ -302,40 +269,23 @@ def generate_random_online_features(size):
 
 def generate_random_platforms(size):
     """
-    Generate a list of random platforms for video games.
+    Generate a list of randomly weighted platforms for video games.
 
     Parameters:
-    - size (int): The number of random platforms to generate.
+    - size (int): The number of platforms to generate.
 
     Returns:
-    - list: A list of random platforms for video games.
+    - list: A list of randomly weighted platforms for video games.
     """
-    platforms = [
-        "PC",
-        "PlayStation 5",
-        "Xbox Series X",
-        "Nintendo Switch",
-        "PlayStation 4",
-        "Xbox One",
-        "Nintendo 3DS",
-        "iOS",
-        "Android",
-        "PlayStation Vita",
-        "Wii U",
-        "Nintendo DS",
-        "PlayStation 3",
-        "Xbox 360",
-        "Wii",
-        "PlayStation 2",
-        "Xbox",
-        "GameCube",
-        "Game Boy Advance",
-        "Nintendo 64"
+    platforms_weighted = [
+        ("Nintendo", ["Nintendo Switch", "Nintendo 3DS", "Wii U", "Nintendo DS", "Wii", "GameCube", "Game Boy Advance", "Nintendo 64"]),
+        ("PlayStation-Xbox", ["PlayStation 5", "Xbox Series X", "PlayStation 4", "Xbox One", "PlayStation 3", "Xbox 360", "PlayStation 2", "Xbox"]),
+        ("PC-iOS-Android", ["PC", "iOS", "Android", "PlayStation Vita"])
     ]
-    if size > len(platforms):
-        platforms *= (size // len(platforms)) + 1
 
-    return random.sample(platforms, size)
+    platforms = [platform for group in platforms_weighted for platform in random.choices(group[1], k=size)]
+
+    return platforms
 
 
 def generate_random_modes(size):
@@ -402,8 +352,18 @@ def generate_random_prices(size):
     Returns:
     - list: A list of random prices for video games.
     """
-    return [round(random.uniform(0.99, 59.99), 2) for _ in range(size)]
+    mean_price = 8
+    std_dev = 4
 
+    prices = np.random.normal(loc=mean_price, scale=std_dev, size=size)
+
+    prices = np.clip(prices, 5, 10)
+
+    prices = np.round(prices, decimals=2)
+
+    prices = prices.tolist()
+
+    return prices
 
 def generate_random_metacritic_scores(size):
     """

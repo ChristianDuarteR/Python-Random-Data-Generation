@@ -3,11 +3,11 @@ import csv
 from VideoGame import VideoGame
 
 if __name__ == "__main__":
-    size = 500
+    size = 2000000
 
     classifications = datagenerator.generate_random_classification(1, 10, size)
     emails = datagenerator.generate_random_valid_emails(size, '../files/dictionary.txt')
-    names = datagenerator.generate_random_nameGames(size, '../files/themes.txt', '../files/endings.txt')
+    names = datagenerator.generate_random_nameGames(size, '../files/themes.txt', '../files/middle.txt', '../files/endings.txt')
     date = datagenerator.generate_random_date(size)
     consoles = datagenerator.generate_random_console(size)
     publishers = datagenerator.generate_random_publishers(size)

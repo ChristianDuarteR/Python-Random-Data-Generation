@@ -1,3 +1,4 @@
+import itertools
 from datetime import datetime, timedelta
 from src.loadWords import load_words_from_file
 import numpy as np
@@ -33,7 +34,7 @@ def generate_random_valid_emails(count, names):
 
 import random
 
-def generate_random_nameGames(count, themes_file, endings_file):
+def generate_random_nameGames(count, themes_file, middle_file ,endings_file):
     """
     Generate a list of random video game names.
 
@@ -44,12 +45,18 @@ def generate_random_nameGames(count, themes_file, endings_file):
     - list: A list of random video game names.
     """
     themes = load_words_from_file(themes_file)
+    middle = load_words_from_file(middle_file)
     endings = load_words_from_file(endings_file)
-    game_names = set()
-    while len(game_names) < count:
-        game_name = f"{random.choice(themes)} {random.choice(endings)}"
-        game_names.add(game_name)
-    return list(game_names)
+
+    # Generar todas las combinaciones posibles sin repetición
+    all_combinations = [' '.join(combination) for combination in itertools.product(themes, middle, endings)]
+
+    if len(all_combinations) < count:
+        raise ValueError("No hay suficientes combinaciones para el recuento solicitado.")
+
+    random_names = random.sample(all_combinations, count)
+    return random_names
+
 
 def generate_random_date(size):
     """

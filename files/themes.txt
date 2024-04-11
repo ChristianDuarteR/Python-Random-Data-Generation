@@ -1,25 +1,150 @@
-Galactic Odyssey
-Mystic Quest
-Shadow Adventure
-Dragon Saga
-Cosmic Journey
-Eternal Legend
-Ancient Chronicles
-Starlight Odyssey
-Forgotten Legends
-Celestial Adventure
-Enchanted Quest
-Phantom Saga
-Abyssal Journey
-Mythic Adventure
-Solar Odyssey
-Infinite Legends
-Neon Quest
-Elemental Saga
-Lunar Chronicles
-Dreamy Odyssey
-Emerald Legends
-Infernal Adventure
-Cyber Quest
-Twilight Saga
-Frozen Journey
+Destiny
+Shadow
+Cyber
+Legend
+Warzone
+Galactic
+Mystic
+Titan
+Infinite
+Apocalypse
+Odyssey
+Chaos
+Phoenix
+Horizon
+Dragon
+Nexus
+Titanfall
+Chrono
+Rebirth
+Astral
+Horizon
+Legacy
+Quantum
+Eternity
+Nexus
+Nova
+Frontier
+Genesis
+Eclipse
+Celestial
+Omega
+Nexus
+Dominion
+Shadow
+Legend
+Eternal
+Omega
+Frontier
+Fusion
+Quantum
+Abyss
+Chaos
+Infinity
+Valor
+Universe
+Rift
+Hyper
+Solar
+Legacy
+Storm
+Horizon
+Destiny
+Mystic
+Cyber
+Warzone
+Galactic
+Legend
+Apocalypse
+Odyssey
+Phoenix
+Chaos
+Titan
+Astral
+Nexus
+Eternity
+Horizon
+Nova
+Titanfall
+Chrono
+Rebirth
+Genesis
+Quantum
+Eclipse
+Nexus
+Celestial
+Frontier
+Omega
+Eternal
+Dominion
+Nexus
+Shadow
+Legend
+Fusion
+Frontier
+Valor
+Abyss
+Infinity
+Solar
+Universe
+Rift
+Hyper
+Storm
+Horizon
+Mystic
+Warzone
+Destiny
+Galactic
+Legend
+Odyssey
+Phoenix
+Apocalypse
+Titan
+Chaos
+Eternity
+Astral
+Nexus
+Horizon
+Nova
+Titanfall
+Chrono
+Genesis
+Quantum
+Rebirth
+Nexus
+Eclipse
+Celestial
+Omega
+Frontier
+Eternal
+Dominion
+Nexus
+Shadow
+Fusion
+Legend
+Frontier
+Valor
+Abyss
+Infinity
+Solar
+Universe
+Rift
+Hyper
+Storm
+Horizon
+Mystic
+Warzone
+Destiny
+Galactic
+Legend
+Odyssey
+Phoenix
+Apocalypse
+Titan
+Chaos
+Eternity
+Astral
+Nexus
+Horizon
+Nova
+Titanfall
